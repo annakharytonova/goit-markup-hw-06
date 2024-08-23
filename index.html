@@ -24,7 +24,7 @@
   </head>
   <body>
     <!--#region header-->
-    <header class="page-header">
+    <header class="page-header hidden">
       <div class="container container-header">
         <nav class="header-nav">
           <a class="logo header-logo" href="./index.html"
@@ -67,7 +67,7 @@
       </section>
       <!--#endregion hero-->
       <!--#region reviews-->
-      <section class="reviews">
+      <section class="reviews hidden">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="reviews-list">
@@ -124,14 +124,18 @@
       </section>
       <!--#endregion reviews-->
       <!--#region Our Team-->
-      <section class="team">
+      <section class="team hidden">
         <div class="container container-team">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/mark.jpg"
+                srcset="
+                  ./images/team/mark-mob-min.jpg    1x,
+                  ./images/team/mark-mob@2x-min.jpg 2x
+                "
+                src="./images/team/mark-mob-min.jpg"
                 alt="mark"
                 width="264"
                 height="260"
@@ -174,7 +178,11 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/tom.jpg"
+                srcset="
+                  ./images/team/tom-mob-min.jpg    1x,
+                  ./images/team/tom-mob@2x-min.jpg 2x
+                "
+                src="./images/team/tom-mob-min.jpg"
                 alt="tom"
                 width="264"
                 height="260"
@@ -217,7 +225,11 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/camila.jpg"
+                srcset="
+                  ./images/team/camila-mob-min.jpg    1x,
+                  ./images/team/camila-mob@2x-min.jpg 2x
+                "
+                src="./images/team/camila-mob-min.jpg"
                 alt="camila"
                 width="264"
                 height="260"
@@ -260,7 +272,11 @@
             <li class="team-item">
               <img
                 class="team-img"
-                src="./images/daniel.jpg"
+                srcset="
+                  ./images/team/daniel-mob-min.jpg    1x,
+                  ./images/team/daniel-mob@2x-min.jpg 2x
+                "
+                src="./images/team/daniel-mob-min.jpg"
                 alt="daniel"
                 width="264"
                 height="260"
@@ -305,12 +321,44 @@
       </section>
       <!--#endregion Our Team-->
       <!--#region Portfolio-->
-      <section class="portfolio">
+      <section class="portfolio hidden">
         <div class="container container-portfolio">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-item">
               <div class="text-for-img">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-desk-min.jpg    1x,
+                      ./images/portfolio/bank-desk@2x-min.jpg 2x
+                    "
+                    media="(min-width: 1158px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-tab-min.jpg    1x,
+                      ./images/portfolio/bank-tab@2x-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+
+                  <source
+                    srcset="
+                      ./images/portfolio/bank-mob-min.jpg    1x,
+                      ./images/portfolio/bank-mob@2x-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+
+                  <img
+                    src="./images/portfolio/bank-desk-min.jpg"
+                    width=""
+                    height=""
+                    alt=""
+                  />
+                </picture>
                 <img
                   class="portfolio-img"
                   src="./images/banking.jpg"
@@ -435,7 +483,7 @@
       <!--#endregion Portfolio-->
     </main>
     <!--#region footer-->
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container footer-container">
         <div class="container-logo">
           <a class="logo footer-logo" href="./index.html"
@@ -501,7 +549,7 @@
       </div>
     </footer>
     <!--#endregion footer-->
-    <div class="backdrop" data-modal>
+    <div class="backdrop hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="close-icon" width="8" height="8">
