@@ -562,3 +562,39 @@ PORTFOLIO
 FOOTER
 ======================================================================================================================================================== */
 /* #region footer */
+.page-footer {
+  background: #2e2f42;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-logo {
+}
+
+.footer-logo {
+  display: flex;
+}
+
+.footer-logo .logo-part {
+  color: #f4f4fd;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1158px) {
+  .page-footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
