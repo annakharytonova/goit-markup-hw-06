@@ -34,6 +34,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {
@@ -81,7 +83,191 @@ button {
 HEADER
 ======================================================================================================================================================== */
 /* #region header */
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: block;
+  padding: 16px 0;
+}
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  margin-right: 76px;
+}
+
+.header-logo .logo-part {
+  color: #2e2f42;
+}
+.nav-list {
+  display: none;
+}
+
+.header-contacts {
+  display: none;
+}
+
+.burger-btn {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.burger-svg {
+  display: block;
+  fill: #2f2f37;
+}
+
+/* .mobile-menu.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+} */
+
+.mobile-menu-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* visibility: hidden;
+  opacity: 0;
+  pointer-events: none; */
+}
+.mobile-nav-list {
+}
+.mobile-nav-item {
+}
+.mobile-nav-link {
+}
+.mobile-header-contacts {
+}
+.mobile-contacts-list {
+}
+.mobile-contacts-item {
+}
+.mobile-contacts-link {
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+    align-items: center;
+  }
+  .header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+  }
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+  .nav-link {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link::after {
+    content: '';
+    bottom: -1px;
+    position: absolute;
+    left: 0;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .nav-link:hover:after,
+  .nav-link:focus:after,
+  .nav-link.nav-link.current::after {
+    opacity: 1;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link.current {
+    color: #404bbf;
+  }
+  .nav-link:active {
+    color: #404bbf;
+  }
+
+  .header-contacts {
+    display: flex;
+  }
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-end;
+  }
+
+  .contacts-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contacts-link:hover,
+  .contacts-link:focus {
+    color: #404bbf;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
 /* #endregion header */
 
 /* ========================================================================================================================================================
@@ -462,7 +648,7 @@ PORTFOLIO
 
 .portfolio-item {
   background-color: #fff;
-  width: 288px;
+  width: 100%;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -570,12 +756,7 @@ FOOTER
 
 .footer-container {
   display: flex;
-  align-items: baseline;
-}
-
-.footer-container {
-  display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .container-logo {
@@ -583,6 +764,7 @@ FOOTER
 
 .footer-logo {
   display: flex;
+  justify-content: center;
 }
 
 .footer-logo .logo-part {
