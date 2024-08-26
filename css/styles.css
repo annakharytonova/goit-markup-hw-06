@@ -1367,6 +1367,10 @@ BACKDROP
   .input-model {
     width: 360px;
   }
+
+  .textarea-comment {
+    width: 408px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
