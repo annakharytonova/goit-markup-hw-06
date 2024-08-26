@@ -208,9 +208,6 @@ HEADER
   fill: #fff;
 }
 
-.mobile-nav {
-}
-
 .mobile-nav-list {
   display: flex;
   align-items: flex-start;
@@ -219,8 +216,6 @@ HEADER
   gap: 40px;
 }
 
-.mobile-nav-item {
-}
 .mobile-nav-link {
   font-weight: 700;
   font-size: 36px;
@@ -241,8 +236,7 @@ HEADER
   flex-direction: column;
   gap: 24px;
 }
-.mobile-contacts-item {
-}
+
 .mobile-contacts-link {
   font-weight: 500;
   font-size: 20px;
